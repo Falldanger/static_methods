@@ -48,8 +48,8 @@
 		public static function extract_string($str){
 			preg_match_all('#\[(.*?)\]#', $str, self::$matches);
 			self::$getstr='';
-			for ($i=0; $i <count(self::$matches) ; $i++) { 
-			self::$getstr=self::$getstr.' '.self::$matches[1][$i];
+			for ($i=0; $i <count(self::$matches[0]) ; $i++) { 
+				self::$getstr=self::$getstr.' '.self::$matches[1][$i];
 			}
 			
 			return self::$getstr;
@@ -71,6 +71,6 @@ $query='SELECT `date` FROM `test`';
 echo Test::sql_date_format($getdate).'</br>';
 
 //extract_string function
-echo Test::extract_string('quikly [brown fox] and little[catty] here').'</br>';
+echo Test::extract_string('The quick [brown fox].').'</br>';
 
 ?>
