@@ -1,0 +1,4 @@
+Write a class that will support the following methods: 
+	1. Static function last_word($sentence) – returns the length of the last word of a given sentence, or 0 for empty string. 
+	2. Static function sql_date_format($dateStr) – returns a date formatted in sql date format. 
+	3. Static function extract_string($str) – returns a part of a string that is marked with square parenthesis, if exists. For example:  for "The quick [brown fox]." It will return "brown fox". For "Hello World" it will return "".
